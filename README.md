@@ -1,27 +1,20 @@
-# LearnAngularForm
+## [how to create github repository from local folder](https://docs.github.com/en/free-pro-team@latest/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+```
+Eric@DESKTOP-I34L773 MINGW64 /c/opt/02-learning/learn-angular-form (master)
+$ git init -b .
 
-## Development server
+$ git add .
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+$ git commit -m "First commit"
 
-## Code scaffolding
+$ git remote add origin https://github.com/eric-el-tan/learn-angular-form.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+$ git remote -v
 
-## Build
+$ git branch -a
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+$ git push -u origin master
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ask for password
+```
