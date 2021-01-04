@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "learn-angular-form"
+  "defaultProject": "learn-angular-form",
+  "cli": {
+    "analytics": false
+  }
 }
