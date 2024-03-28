@@ -18,3 +18,11 @@ $ git push -u origin master
 
 ask for password
 ```
+
+## [Angular Testing](https://testing-angular.com/introduction/#introduction)
+
+### [Testing Principles](https://testing-angular.com/angular-testing-principles/#angular-testing-principles)
+Testability - Well-structured code
+```
+We know from experience that code that is easy to test is also simpler, better structured, easier to read and easier to understand. The main technique of writing testable code is to break code into smaller chunks that “do one thing and do it well”. Then couple the chunks loosely.
+```
