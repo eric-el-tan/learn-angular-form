@@ -9,7 +9,7 @@
       "type": "chrome",
       "request": "launch",
       "preLaunchTask": "npm: test", // task of task.json
-      "url": "http://localhost:4200/", // route where it will launch
+      "url": "http://localhost:42001/", // route where it will launch
       "webRoot": "${workspaceFolder}" // path of work space
     },
   ]
