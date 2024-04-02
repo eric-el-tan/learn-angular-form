@@ -32,3 +32,26 @@ We know from experience that code that is easy to test is also simpler, better s
 - `npm install @ionic/angular@4.11.13` or `npm install @ionic/angular@v4-lts`
 - `npm install ionic`
 - `npm i @ionic/angular`
+
+## [Measure web page performance](https://www.angulararchitects.io/en/blog/how-to-measure-initial-load-performance/)
+
+1. [Why is Initial Load Performance so Important?](https://www.angulararchitects.io/en/blog/why-is-initial-load-performance-so-important/)
+    Server-side rendering (SSR) can greatly enhance initial load time and contribute to a faster web app experience. Unlike client-side rendering, where the browser must wait for all JavaScript and data to be downloaded before rendering the page, SSR generates the HTML on the server and sends a fully rendered page to the browser.
+    This approach eliminates the need for additional round trips between the client and the server, reducing latency and improving Initial Load Performance. By delivering pre-rendered content, SSR enables users to see and interact with the app faster, as there is no delay in rendering or waiting for data to be fetched.
+
+    Hydration is a technique that complements server-side rendering (SSR) and improves the initial load time of SSR-rendered pages: After the initial HTML is rendered on the server and sent to the client, hydration involves re-rendering the components on the client-side and attaching event handlers. This process allows the static HTML to be transformed into an interactive and dynamic application.
+
+    The main benefit of the so-called Non-Destructive Hydration introduced in Angular V16 is that the DOM does not have to be rerendered completely in the client which often showed up in a blank flash of the page during the process - which of course resulted in a very bad user experience. If you'd ask me personally I'd say for that reason SSR was not really usable in Angular until now!
+
+2. [How to measure Initial Load Performance](https://www.angulararchitects.io/en/blog/how-to-measure-initial-load-performance/)
+- [Chrome Extension - Lighthouse ](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de)
+- Performance, Accessibility, Best Practices, SEO
+- [webpagetest.org](https://www.webpagetest.org/)
+
+3. [How to use Angular SSR with Hydration](https://www.angulararchitects.io/en/blog/how-to-use-angular-ssr-with-hydration/)
+- [GitHub - Sample](https://gitlab.com/L_X_T/ng-performance-demo)
+
+## [Medium: Improve Angular Performance](https://medium.com/@chandrabhushan1323/how-to-improve-angular-application-performance-fadde3890e71)
+## [Improving Angular Initial Load Time](https://levelup.gitconnected.com/improving-angular-initial-load-time-fba8b1289c48)
+
+
