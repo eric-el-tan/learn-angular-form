@@ -26,3 +26,9 @@ Testability - Well-structured code
 ```
 We know from experience that code that is easy to test is also simpler, better structured, easier to read and easier to understand. The main technique of writing testable code is to break code into smaller chunks that “do one thing and do it well”. Then couple the chunks loosely.
 ```
+
+## [Angular Ionic - Loading](https://ionicframework.com/docs/api/loading)
+- `npm view @ionic/angular versions`
+- `npm install @ionic/angular@4.11.13` or `npm install @ionic/angular@v4-lts`
+- `npm install ionic`
+- `npm i @ionic/angular`
