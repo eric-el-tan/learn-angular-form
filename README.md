@@ -54,4 +54,30 @@ We know from experience that code that is easy to test is also simpler, better s
 ## [Medium: Improve Angular Performance](https://medium.com/@chandrabhushan1323/how-to-improve-angular-application-performance-fadde3890e71)
 ## [Improving Angular Initial Load Time](https://levelup.gitconnected.com/improving-angular-initial-load-time-fba8b1289c48)
 
+## [Angular Performance](https://medium.com/tag/angular-performance)
+## [Optimizing Angular Performance with “trackBy” in *ngFor](https://medium.com/@Evelyn.Taylor/optimizing-angular-performance-with-trackby-in-ngfor-3510694dcfc)
+-------------------------------------------------
 
+1. Lighthouse time TEST / PROD / LOCAL (minimised)
+
+2. identifiy root caused
+
+- frontend rendering -> ngFor add traceBy
+- backend sorting -> new index on sort by timestamp
+- reduce data volume (number of record)
+
+	DEV Network
+	
+	100
+	..
+	1
+	
+	1. index	-> sort by ts desc
+	pk: id
+	sk: timestamp
+	
+	2. less attributes
+	
+	3. paging	-> ts: today - 6mths
+	
+	4. purging
