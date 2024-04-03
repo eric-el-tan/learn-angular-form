@@ -81,3 +81,42 @@ We know from experience that code that is easy to test is also simpler, better s
 	3. paging	-> ts: today - 6mths
 	
 	4. purging
+
+## [Resource Timing API](https://medium.com/geekculture/angular-node-using-resource-timing-api-to-get-api-timing-information-f460898f31d9)
+
+```
+ //  For Fun
+  async getGeneralApiResult(url: string, inputParams = {}, fullResponse = false) {
+    // console.log(`***Calling WebService [URL: ${url} from Server]....`);
+
+    const headers = (await this.getHeader()).headers;
+    let params = new HttpParams();
+    Object.keys(inputParams).filter(key => inputParams[key] != null).forEach(key => {
+      params = params.append(key, inputParams[key]);
+    });
+    return this.http.get<ApiResponse>(this.usersUrl + url, { headers, params }).pipe(
+      tap(data => { this.analysePerformance(data)}),
+      shareReplay(1)).toPromise().then((resp: ApiResponse) => {
+        if (resp.responseMessage?.length > 0) {
+          this.alertMessage.showSuccessMsg(resp);
+        }
+        return fullResponse ? resp : resp.data;
+      }).catch(error => {
+        this.errHandlingService.handleError(error);
+      });
+  }
+
+  analysePerformance (data: any) {
+    let resourceList = window.performance.getEntriesByType('resource');
+    let filteredResourceList = resourceList.filter(
+      (resource:any) =>{
+      return resource['initiatorType'].includes('xmlhttprequest')
+      }
+    );
+    filteredResourceList.forEach((entry:any)=>{
+      console.log(
+       `Resource  ${entry.name} loaded in ${entry.duration} ms and delivered data of size ${entry["decodedBodySize"]} bytes`
+        );
+    })
+  }
+```
