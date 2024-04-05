@@ -27,13 +27,15 @@ Testability - Well-structured code
 We know from experience that code that is easy to test is also simpler, better structured, easier to read and easier to understand. The main technique of writing testable code is to break code into smaller chunks that “do one thing and do it well”. Then couple the chunks loosely.
 ```
 
-## [Angular Ionic - Loading](https://ionicframework.com/docs/api/loading)
+## Setup
+### [Angular Ionic - Loading](https://ionicframework.com/docs/api/loading)
 - `npm view @ionic/angular versions`
 - `npm install @ionic/angular@4.11.13` or `npm install @ionic/angular@v4-lts`
 - `npm install ionic`
 - `npm i @ionic/angular`
 
-## [Measure web page performance](https://www.angulararchitects.io/en/blog/how-to-measure-initial-load-performance/)
+## Performance
+### [Measure web page performance](https://www.angulararchitects.io/en/blog/how-to-measure-initial-load-performance/)
 
 1. [Why is Initial Load Performance so Important?](https://www.angulararchitects.io/en/blog/why-is-initial-load-performance-so-important/)
     Server-side rendering (SSR) can greatly enhance initial load time and contribute to a faster web app experience. Unlike client-side rendering, where the browser must wait for all JavaScript and data to be downloaded before rendering the page, SSR generates the HTML on the server and sends a fully rendered page to the browser.
@@ -51,11 +53,16 @@ We know from experience that code that is easy to test is also simpler, better s
 3. [How to use Angular SSR with Hydration](https://www.angulararchitects.io/en/blog/how-to-use-angular-ssr-with-hydration/)
 - [GitHub - Sample](https://gitlab.com/L_X_T/ng-performance-demo)
 
-## [Medium: Improve Angular Performance](https://medium.com/@chandrabhushan1323/how-to-improve-angular-application-performance-fadde3890e71)
-## [Improving Angular Initial Load Time](https://levelup.gitconnected.com/improving-angular-initial-load-time-fba8b1289c48)
+### [Medium: Improve Angular Performance](https://medium.com/@chandrabhushan1323/how-to-improve-angular-application-performance-fadde3890e71)
+### [Improving Angular Initial Load Time](https://levelup.gitconnected.com/improving-angular-initial-load-time-fba8b1289c48)
 
-## [Angular Performance](https://medium.com/tag/angular-performance)
-## [Optimizing Angular Performance with “trackBy” in *ngFor](https://medium.com/@Evelyn.Taylor/optimizing-angular-performance-with-trackby-in-ngfor-3510694dcfc)
+### [Angular Performance](https://medium.com/tag/angular-performance)
+ ## [Optimizing Angular Performance with “trackBy” in *ngFor](https://medium.com/@Evelyn.Taylor/optimizing-angular-performance-with-trackby-in-ngfor-3510694dcfc)
+
+### [Angular Performance Best Practices](https://blog.bitsrc.io/improving-angular-performance-strategies-and-best-practices-81fb311af8fb)
+### [Resource Timing API](https://medium.com/geekculture/angular-node-using-resource-timing-api-to-get-api-timing-information-f460898f31d9)
+- `AppComponent.analysePerformance()` - show PerformanceResourceTiming
+
 -------------------------------------------------
 
 1. Lighthouse time TEST / PROD / LOCAL (minimised)
@@ -81,42 +88,3 @@ We know from experience that code that is easy to test is also simpler, better s
 	3. paging	-> ts: today - 6mths
 	
 	4. purging
-
-## [Resource Timing API](https://medium.com/geekculture/angular-node-using-resource-timing-api-to-get-api-timing-information-f460898f31d9)
-
-```
- //  For Fun
-  async getGeneralApiResult(url: string, inputParams = {}, fullResponse = false) {
-    // console.log(`***Calling WebService [URL: ${url} from Server]....`);
-
-    const headers = (await this.getHeader()).headers;
-    let params = new HttpParams();
-    Object.keys(inputParams).filter(key => inputParams[key] != null).forEach(key => {
-      params = params.append(key, inputParams[key]);
-    });
-    return this.http.get<ApiResponse>(this.usersUrl + url, { headers, params }).pipe(
-      tap(data => { this.analysePerformance(data)}),
-      shareReplay(1)).toPromise().then((resp: ApiResponse) => {
-        if (resp.responseMessage?.length > 0) {
-          this.alertMessage.showSuccessMsg(resp);
-        }
-        return fullResponse ? resp : resp.data;
-      }).catch(error => {
-        this.errHandlingService.handleError(error);
-      });
-  }
-
-  analysePerformance (data: any) {
-    let resourceList = window.performance.getEntriesByType('resource');
-    let filteredResourceList = resourceList.filter(
-      (resource:any) =>{
-      return resource['initiatorType'].includes('xmlhttprequest')
-      }
-    );
-    filteredResourceList.forEach((entry:any)=>{
-      console.log(
-       `Resource  ${entry.name} loaded in ${entry.duration} ms and delivered data of size ${entry["decodedBodySize"]} bytes`
-        );
-    })
-  }
-```
