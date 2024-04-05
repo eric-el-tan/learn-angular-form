@@ -65,28 +65,23 @@ We know from experience that code that is easy to test is also simpler, better s
 
 ### [Angular Performance Best Practices](https://blog.bitsrc.io/improving-angular-performance-strategies-and-best-practices-81fb311af8fb)
 
+## Proposal
+---------------------------------------------------------------------
+1. DB: create index PK: PROJECTS, SK: modifiedAt desc
+
+2. Dashboard: load (latest) 1000 records
+
+3. Add Search button > Pop-up > Search name
+
+4. click to goto detail
+
+5. use Lighthouse before/after as benchmark on env: TEST / PROD / LOCAL (minimised)
 -------------------------------------------------
 
-1. Lighthouse time TEST / PROD / LOCAL (minimised)
+
 
 2. identifiy root caused
+? frontend rendering -> ngFor add traceBy
+x backend sorting -> new index on sort by timestamp
+x reduce data volume (number of record)
 
-- frontend rendering -> ngFor add traceBy
-- backend sorting -> new index on sort by timestamp
-- reduce data volume (number of record)
-
-	DEV Network
-	
-	100
-	..
-	1
-	
-	1. index	-> sort by ts desc
-	pk: id
-	sk: timestamp
-	
-	2. less attributes
-	
-	3. paging	-> ts: today - 6mths
-	
-	4. purging
