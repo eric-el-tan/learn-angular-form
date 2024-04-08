@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port=42001",
+    "performance": "node --max_old_space_size=8192 node_modules/@angular/cli/bin/ng serve --configuration performance -o --port=42001",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

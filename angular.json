@@ -55,6 +55,33 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "performance": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
             }
           }
         },
@@ -66,6 +93,9 @@
           "configurations": {
             "production": {
               "browserTarget": "learn-angular-form:build:production"
+            },
+            "performance": {
+              "browserTarget": "learn-angular-form:build:performance"
             }
           }
         },
@@ -114,6 +144,9 @@
           "configurations": {
             "production": {
               "devServerTarget": "learn-angular-form:serve:production"
+            },
+            "performance": {
+              "devServerTarget": "learn-angular-form:serve:performance"
             }
           }
         }

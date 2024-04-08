@@ -52,8 +52,6 @@ We know from experience that code that is easy to test is also simpler, better s
 1. Non-Destructive Hydration of Angular V16: DOM does not have to be rerendered completely in the client
 
 ### [How to measure Initial Load Performance](https://www.angulararchitects.io/en/blog/how-to-measure-initial-load-performance/)
-### [Chrome Extension - Lighthouse ](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de)
-- Performance, Accessibility, Best Practices, SEO
 ### [How to use Angular SSR with Hydration](https://www.angulararchitects.io/en/blog/how-to-use-angular-ssr-with-hydration/)
 - [GitHub - Sample](https://gitlab.com/L_X_T/ng-performance-demo)
 
@@ -85,3 +83,16 @@ We know from experience that code that is easy to test is also simpler, better s
 x backend sorting -> new index on sort by timestamp
 x reduce data volume (number of record)
 
+### [Chrome Extension - Lighthouse ](https://www.youtube.com/watch?v=VyaHwvPWuZU)
+- [install lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de)
+- [First Contentful Paint (FCP)](https://www.youtube.com/watch?v=9pqcMD1udSY)
+  - [YT: Display text](https://youtu.be/9pqcMD1udSY?t=219)
+  - [YT: Minify](https://youtu.be/9pqcMD1udSY?t=232) - [M: Optimizations](https://medium.com/swlh/optimizations-by-angular-54cb80add6d4)
+    - `npm run performance`
+  - [YT: CSS Coverage](https://youtu.be/9pqcMD1udSY?t=292)
+
+  3:06 Display Text Before and During Font Loading
+3:51 Minify Your HTML, CSS and Javascript
+4:38 Take Out Unused CSS
+
+- Performance, Accessibility, Best Practices, SEO
