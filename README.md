@@ -86,10 +86,11 @@ x reduce data volume (number of record)
 ### [Chrome Extension - Lighthouse ](https://www.youtube.com/watch?v=VyaHwvPWuZU)
 - [install lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=de)
 - [First Contentful Paint (FCP)](https://www.youtube.com/watch?v=9pqcMD1udSY)
-  - [YT: Display text](https://youtu.be/9pqcMD1udSY?t=219)
+  - [YT: Display text](https://youtu.be/9pqcMD1udSY?t=219) - font-display: swap;
+    - [M: Web Font FOIT & FOUT](https://282714.medium.com/%E7%B6%B2%E9%A0%81%E5%8A%A0%E8%BC%89%E5%AD%97%E5%9E%8Bfoit-fout%E8%88%87%E6%95%88%E8%83%BD%E6%B8%AC%E8%A9%A6-cb0b03daad60)
   - [YT: Minify](https://youtu.be/9pqcMD1udSY?t=232) - [M: Optimizations](https://medium.com/swlh/optimizations-by-angular-54cb80add6d4)
     - `npm run performance`
-  - [YT: CSS Coverage](https://youtu.be/9pqcMD1udSY?t=292)
+  - [YT: CSS Coverage](https://youtu.be/9pqcMD1udSY?t=292) - [Chrome: CSS Coverage](https://developer.chrome.com/docs/devtools/coverage)
 
   3:06 Display Text Before and During Font Loading
 3:51 Minify Your HTML, CSS and Javascript
